@@ -112,7 +112,7 @@
 <footer>A planning tool, not financial advice. Your numbers stay on this device only.</footer>
 
 <script>
-const DEFAULTS = {income:3071, rent:750, fixed:150, living:350, remit:300, cardBal:5774, apr:23.7, buffer:0, friend:4650, token:100};
+const DEFAULTS = {income:3000, rent:700, fixed:150, living:350, remit:250, cardBal:5000, apr:23.7, buffer:0, friend:4500, token:100};
 const IDS = Object.keys(DEFAULTS);
 
 // — expense log —
@@ -255,6 +255,7 @@ function recalc(){
         : `<div style="text-align:center;padding:.4rem 0">
              <div style="font-family:Georgia,serif;font-weight:700;font-size:2.2rem;color:var(--pine)">${fmt(daily)}<span style="font-size:.9rem;color:var(--sage)"> / day</span></div>
              <div style="font-size:.72rem;color:var(--sage)">${fmt(livingLeft)} living money remains · stay under this and the plan holds itself</div>
+             <div style="margin-top:.5rem;padding-top:.5rem;border-top:1px solid var(--line);font-size:.8rem;color:var(--rust)">Kill shot armed for this month: <b style="font-family:Georgia,serif;font-size:1.05rem">${fmt(f.cardPay)}</b> → Advanzia</div>
            </div>`}
     </div>`;
 
